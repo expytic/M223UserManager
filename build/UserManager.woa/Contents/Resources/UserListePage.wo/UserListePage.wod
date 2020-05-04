@@ -1,0 +1,55 @@
+userlist : WORepetition {
+	list = application.users;
+	item = user;
+}
+info : WOHyperlink {
+	action = bearbeiten;
+}
+login : WOString {
+	value = user.login;
+}
+firstName : WOString {
+	value = user.firstName;
+}
+secondName : WOString {
+	value = user.secondName;
+}
+showRole : WOString {
+	value = user.rechte;
+}
+
+
+Login : WOForm {
+	multipleSubmit = true;
+}
+fname : WOTextField {
+	value = selectedUser.firstName;
+}
+lname : WOTextField {
+	value = selectedUser.secondName;
+}
+editRole : WOPopUpButton {
+	list = application.rollen;
+	item = selectedUser.rechte;
+	displayString = selectedUser.rechte;
+	selection = rolle;
+	
+}
+username : WOTextField {
+	value = selectedUser.login;
+}
+password : WOPasswordField {
+	value = selectedUser.password;
+}
+new : WOSubmitButton {
+	action = neu;
+	value = "new";
+}
+change : WOSubmitButton {
+	action = change;
+	value = "change";
+}
+delete : WOSubmitButton {
+	action = delete;
+	value = "delete";
+}

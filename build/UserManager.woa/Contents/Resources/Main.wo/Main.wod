@@ -1,0 +1,13 @@
+Login : WOForm {
+	multipleSubmit = true;
+}
+username : WOTextField {
+	value = username;
+}
+password : WOPasswordField {
+	value = password;
+}
+submit : WOSubmitButton {
+	action = submit;
+	value = "submit";
+}
